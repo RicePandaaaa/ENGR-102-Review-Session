@@ -4,12 +4,15 @@ import math
 # Take in x
 x = float(input("Enter x: "))
 
-# Counter variables
-approximation = 2 * x
-exponent = 3
+while not (-1 < x < 1):
+    x = float(input("Enter x: "))
 
-# Loop
-while (2 / exponent) * (x ** exponent) >= 10.0**-6:
+# Counter variables
+approximation = 0
+exponent = 1
+
+# Loop and add
+while abs((2 / exponent) * (x ** exponent)) >= 10 ** -6:
     approximation += (2 / exponent) * (x ** exponent)
     exponent += 2
 

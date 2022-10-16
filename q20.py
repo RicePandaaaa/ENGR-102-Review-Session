@@ -9,20 +9,26 @@ odd). Write the Python code to calculate and print the prime numbers between 1 a
 # Store the primes
 primes = ["2"]
 
-# Loop and make the primes
+# First loop goes from 3 (inclusive) to 73 (exclusive)
 for num in range(3, 73, 2):
     # Flag for prime
     is_prime = True
-    # Check if it's prime by dividing num by every prime
+    # Go through the primes
     for prime in primes:
-        # Is divisible by another priime
+        # Check for divisibility
         if num % int(prime) == 0:
             is_prime = False
 
-    # Add the number if it is prime
+    # Add the number to primes if it is prime
     if is_prime:
         primes.append(str(num))
 
 # Output
 print(", ".join(primes))
-print(f"There are {len(primes)} prime numbers from 1 to 73 but not including 73. Therefore, 73 being the 21st prime is {len(primes) == 20}.")
+print(f"There are currently {len(primes)} prime numbers from 1 to 72, therefore, 73 being the 21st prime is {len(primes) == 20}.")
+
+"""
+example = ['a', 'b', 'c']
+
+" | ".join(example) -> "a | b | c"
+"""

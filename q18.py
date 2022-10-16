@@ -12,5 +12,5 @@ b = 1.0
 # string
 c = "1"
 
-# dictionary
-d = {1: 1.0}
+# boolean
+d = True

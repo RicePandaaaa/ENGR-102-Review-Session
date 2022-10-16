@@ -12,4 +12,4 @@ else:
     else:
         print("E")
         print("F")
-    print("G")
+print("G")

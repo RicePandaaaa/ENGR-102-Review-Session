@@ -6,70 +6,63 @@ same age.
 """
 
 """
-Speedrun Crash Course of Dictionaries
+Dictionaries Crash Course
 
 d = {}
 
-if I want to add to a dictionary
+To add...
 
 d[key] = value
+d["Name"] = "Anthony" # d = {"Name": "Anthony"}
 
-inside d: {key: value}
+If you want all the keys or all the values
+.keys() and .values()
 
-My keys will be the ages, the values will be the names
+# NOT LISTS
+d.keys() -> dict_keys(["Name"])
+d.values() -> dict_values(["Anthony"])
 
-Getting all the keys and all the values
-.keys()
-.values()
-
-d = {"Frodo": "Best Doggo"}
-keys = d.keys()  # ["Frodo"]
-WRONG
-keys[0]
-RIGHT
-list(keys)[0]  # Gets you "Frodo"
+to make them lists...
+keys = list(d.keys()) -> ["Name"]
+values = list(d.values()) -> ["Anthony"]
 """
 
-# Storage
+# Storing data
 people = {}
 
-# Grab input
+# Loop until I get an age of 0
 age = int(input("Enter your age: "))
+
 while age != 0:
-    # Ask for name
+    # Ask for the name
     name = input("Enter your name: ")
 
     # Add to people
     people[age] = name
 
-    # Keep asking
+    # Ask again for the age
     age = int(input("Enter your age: "))
 
-# Getting the averages
+# Calculate the average
 ages = list(people.keys())
-average = -1
+average = "N/A"
 
-if len(ages) != 0:
+# If there are people, calculate the average
+if len(ages) > 0:
     average = sum(ages) / len(ages)
 
-# Sorting people
+# Find the oldest and youngest people
 ages.sort()
-youngest_person = ages[0]
-oldest_person = ages[-1]
+youngest_name = "N/A"
+oldest_name = "N/A"
 
+# If there are people
+if len(ages) > 0:
+    youngest_age = ages[0]
+    oldest_age = ages[-1]
+
+    youngest_name = people[youngest_age]
+    oldest_name = people[oldest_age]
 
 # Output
-print(f"Average: {average}, Oldest: {people[oldest_person]}, Youngest: {people[youngest_person]}")
-
-"""
-ages = [1, 2, 7, 4]
-names = ["a", "b", "c", "d"]
-
-loop through and find min and max
-oldest is 7, youngest is 1
-loop through again and get their indices
-1 is at index 0
-7 is at index 2
-so...
-the names you need are names[0] and names[2]
-"""
+print(f"Average: {average}, Oldest: {oldest_name}, Youngest: {youngest_name}")

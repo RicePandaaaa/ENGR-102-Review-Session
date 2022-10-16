@@ -12,5 +12,6 @@ else:
     else:
         print("E")
         print("F")
-        print("G")
-        print("H")
+
+print("G")
+print("H")

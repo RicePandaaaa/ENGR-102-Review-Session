@@ -6,14 +6,14 @@ arrays for this problem. Please use Python list functions, list methods, and lis
 y = 4.12x**2 + 1.52x - 7.1
 """
 
-# Data sets
+# Store the data
 xdata = [-1, 0, 1]
 y_data = []
 
-# Plug in 
+# Loop and plug in
 for x in xdata:
     y = (4.12 * (x ** 2)) + (1.52 * x) - 7.1
     y_data.append(y)
 
-# For the sake of checking our results...
+# For checking reasons
 print(y_data)
